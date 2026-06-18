@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>合作洽談｜AI 印前助手</title>
+<meta name="description" content="AI 印前助手印刷廠合作洽談表單，歡迎合版印刷、加工廠、大圖輸出、包裝印刷與禮品印刷合作。">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="skin/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-nav">
+    <a class="logo logo-real" href="index.html"><img src="skin/img/logo-ai-clean.png" alt="AI 印前助手 Logo"><span>AI 印前助手</span></a>
+    <nav class="nav-menu">
+      <a href="#step1">品項尺寸</a>
+      <a href="#step2">上傳預覽</a>
+      <a href="#step3">檢查檔案</a>
+      <a href="#step4">生成 PDF</a>
+      <a href="plans.html">會員方案</a>
+      <a href="print-pricing.html">印刷估價</a>
+    </nav>
+    <div class="lang-switch"><i class="fa-solid fa-globe"></i><select id="langSelect" aria-label="Language"><option value="zh-Hant">繁中</option><option value="en">English</option><option value="ja">日本語</option></select></div>
+    <div class="social-icons" aria-label="聯絡方式">
+      <button class="social-btn line-btn" type="button" data-open-line title="LINE 聯絡客服"><i class="fa-brands fa-line"></i></button>
+      <a class="social-btn" href="mailto:wegomwc@gmail.com" title="Email"><i class="fa-regular fa-envelope"></i></a>
+      <a class="social-btn" href="https://phpmytool.com/" target="_blank" rel="noopener" title="網站"><i class="fa-solid fa-globe"></i></a>
+    </div>
+    <button class="mobile-toggle" type="button" aria-label="開啟選單"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+<main class="page-main standalone-main coop-bg">
+  <section class="coop-hero-panel">
+    <div class="coop-hero-copy">
+      <span class="plan-badge">合作洽談</span>
+      <h1>印刷廠合作洽談</h1>
+      <p>我們正在尋找可長期配合的印刷廠、合版印刷、加工廠、輸出中心與包裝印刷夥伴。若你們可承接名片、DM、貼紙、包裝、特殊加工或大量印刷，請留下資料，我們會主動聯繫。</p>
+    </div>
+    <div class="coop-hero-note">
+      <i class="fa-solid fa-handshake"></i>
+      <b>合作方向</b>
+      <span>穩定品質、可溝通交期、可配合報價與案件追蹤。</span>
+    </div>
+  </section>
+
+  <section class="coop-form-shell">
+    <div class="coop-section-title">
+      <h2>留下合作資料</h2>
+      <p>請填寫下方表格，方便我們初步了解可合作項目與聯絡方式。</p>
+    </div>
+
+    <form class="coop-form coop-form-page redesigned-coop-form">
+      <div class="coop-field-grid">
+        <label>
+          <span>公司名稱</span>
+          <input type="text" id="coopCompany" placeholder="請輸入公司名稱">
+        </label>
+        <label>
+          <span>聯絡人</span>
+          <input type="text" id="coopName" placeholder="請輸入聯絡人姓名">
+        </label>
+        <label>
+          <span>LINE ID</span>
+          <input type="text" id="coopLine" placeholder="例如：minwanchun">
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" id="coopEmail" placeholder="example@email.com">
+        </label>
+      </div>
+
+      <label class="coop-note-field">
+        <span>合作說明</span>
+        <textarea id="coopNote" rows="7" placeholder="請簡單描述可承接品項、工作天、地區、付款方式、寄送方式或合作條件"></textarea>
+      </label>
+    </form>
+
+    <div class="coop-action-row">
+      <button class="btnx btnx-primary" type="button" id="coopSubmitBtn">送出合作資料</button>
+      <a class="btnx btnx-ghost" href="index.html">回首頁</a>
+    </div>
+    <div class="coop-result" id="coopResult"></div>
+  </section>
+</main>
+<footer class="footer"><div class="footer-inner"><div><b>AI 印前助手</b><p>自動檢查僅供印前風險判斷，不代表保證印刷結果。實際印刷色差、紙材、印刷方式與印刷廠設備會影響成品。</p></div><div><b>流程</b><a href="index.html#step1">品項尺寸</a><a href="index.html#step2">上傳預覽</a><a href="index.html#step3">檢查檔案</a><a href="index.html#step4">生成 PDF</a></div><div><b>服務</b><a href="plans.html">會員方案</a><a href="print-pricing.html">印刷報價</a></div><div><b>聯絡</b><a href="#" data-open-line>LINE 諮詢</a><a href="#" data-open-coop>合作洽談</a></div></div></footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="skin/js/main.js"></script>
+</body>
+</html>

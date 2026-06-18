@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 印前助手｜AI圖轉印刷檔、線上檔案檢查、出血裁切線預覽</title>
+<meta name="description" content="AI印前助手提供 AI圖轉印刷檔、線上檔案檢查、印前檢查、PDF轉印刷、出血裁切線預覽、CMYK轉換與印刷估價功能。">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="skin/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-nav">
+    <a class="logo logo-real" href="index.html"><img src="skin/img/logo-ai-clean.png" alt="AI 印前助手 Logo"><span>AI 印前助手</span></a>
+    <nav class="nav-menu">
+      <a href="#step1">品項尺寸</a>
+      <a href="#step2">上傳預覽</a>
+      <a href="#step3">檢查檔案</a>
+      <a href="#step4">生成 PDF</a>
+      <a href="plans.html">會員方案</a>
+      <a href="print-pricing.html">印刷估價</a>
+    </nav>
+    <div class="lang-switch"><i class="fa-solid fa-globe"></i><select id="langSelect" aria-label="Language"><option value="zh-Hant">繁中</option><option value="en">English</option><option value="ja">日本語</option></select></div>
+    <div class="social-icons" aria-label="聯絡方式">
+      <button class="social-btn line-btn" type="button" data-open-line title="LINE 聯絡客服"><i class="fa-brands fa-line"></i></button>
+      <a class="social-btn" href="mailto:wegomwc@gmail.com" title="Email"><i class="fa-regular fa-envelope"></i></a>
+      <a class="social-btn" href="https://phpmytool.com/" target="_blank" rel="noopener" title="網站"><i class="fa-solid fa-globe"></i></a>
+    </div>
+    <button class="mobile-toggle" type="button" aria-label="開啟選單"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+<section class="hero hero-v7">
+  <div class="hero-inner">
+    <div class="flow-shell">
+      <div class="flow-header">
+        <div>
+          <h1 id="heroTitle">一鍵生成印刷檔PDF</h1>
+          <p id="heroSubtitle">還在煩惱 AI 影像、JPG 圖檔無法印刷嗎？上傳圖片後，可進行<strong>AI圖 / JPG / PNG / WebP / GIF / SVG轉印刷檔</strong>、<strong>線上檔案檢查</strong>、<strong>出血裁切線</strong>、<strong>RGB轉CMYK</strong> 及<strong>印刷估價</strong>。適合 AI 生圖、CANVA做稿、名片、DM、貼紙與明信片送印前快速轉檔。</p>
+        </div>
+        <div class="flow-logo"><img src="skin/img/logo-ai-clean.png" alt="AI 印前助手 Logo"><span>v25</span></div>
+      </div>
+
+      <div class="step-nav">
+        <a class="step-pill active" href="#step1"><b>1</b>品項與尺寸</a>
+        <a class="step-pill" href="#step2"><b>2</b>上傳與預覽</a>
+        <a class="step-pill" href="#step3"><b>3</b>檢查檔案</a>
+        <a class="step-pill" href="#step4"><b>4</b>生成 PDF</a>
+      </div>
+
+      <section class="step-block-v7" id="step1">
+        <div class="step-head-v7"><span class="step-no">Step 1</span><h2>選品項與尺寸</h2></div>
+        <div class="scene-grid-v7">
+          <div class="scene-card active" data-product="business-card"><div class="scene-thumb" style="background-image:url('skin/img/print/business-card.png')"></div><h4>一般名片</h4><p>9 x 5.4 cm</p></div>
+          <div class="scene-card" data-product="a4dm"><div class="scene-thumb" style="background-image:url('skin/img/print/a4-dm.png')"></div><h4>一般 A4DM</h4><p>21 x 29.7 cm</p></div>
+          <div class="scene-card" data-product="a3dm"><div class="scene-thumb" style="background-image:url('skin/img/print/large-format.png')"></div><h4>一般 A3DM</h4><p>29.7 x 42 cm</p></div>
+          <div class="scene-card" data-product="sticker-card"><div class="scene-thumb" style="background-image:url('skin/img/print/sticker.png')"></div><h4>一般貼紙</h4><p>9 x 5.4 cm</p></div>
+          <div class="scene-card" data-product="postcard"><div class="scene-thumb" style="background-image:url('skin/img/print/postcard.png')"></div><h4>明信片</h4><p>10.5 x 14.8 cm</p></div>
+          <div class="scene-card" data-product="custom"><div class="scene-thumb" style="background-image:url('skin/img/print/package.png')"></div><h4>自訂尺寸</h4><p>輸入寬 x 高 cm</p></div>
+        </div>
+        <div class="size-form-v13">
+          <select id="productType">
+            <option value="business-card">一般名片 9 x 5.4 cm</option>
+            <option value="a4dm">一般 A4DM 21 x 29.7 cm</option>
+            <option value="a3dm">一般 A3DM 29.7 x 42 cm</option>
+            <option value="sticker-card">一般貼紙 9 x 5.4 cm</option>
+            <option value="postcard">明信片 10.5 x 14.8 cm</option>
+            <option value="custom">自訂尺寸</option>
+          </select>
+          <select id="printSide" aria-label="印刷面"><option value="single" selected>單面印刷</option><option value="double">雙面印刷</option></select>
+          <label class="unit-field"><input id="widthCm" type="number" step="0.1" value="9" placeholder="寬"><span>CM</span></label>
+          <label class="unit-field"><input id="heightCm" type="number" step="0.1" value="5.4" placeholder="高"><span>CM</span></label>
+          <select id="cornerRadius" aria-label="四邊圓角"><option value="0" selected>四邊直角</option><option value="2">四邊圓角 2mm</option><option value="3">四邊圓角 3mm</option><option value="5">四邊圓角 5mm</option></select>
+          <select id="bleedCm" aria-label="出血"><option value="0.2" selected>0.2CM出血</option><option value="0.3">0.3CM出血</option></select>
+          <select id="targetDpi" aria-label="DPI"><option value="300" selected>300DPI</option></select>
+        </div>
+      </section>
+
+      <section class="step-block-v7" id="step2">
+        <div class="step-head-v7"><span class="step-no">Step 2</span><h2>上傳檔案與預覽</h2></div>
+        <p class="section-desc">名片與明信片可選單面或雙面印刷。雙面時請分別上傳正面與背面，系統會將兩面合併成同一份 PDF 的第 1、2 頁。</p>
+        <div class="duplex-layout">
+          <div class="upload-side-list">
+            <div class="side-upload-card active" data-side-box="front">
+              <div class="side-title"><span>正面</span><small>PDF 第 1 頁</small></div>
+              <div class="dropzone-side" data-side="front" role="button" tabindex="0">
+                <input id="frontFileInput" class="side-file-input" data-side="front" type="file" accept=".jpg,.jpeg,.png,.gif,.svg,.pdf,.ai,.eps,.webp" hidden>
+                <i class="fa-solid fa-cloud-arrow-up upload-cloud"></i>
+                <strong>上傳正面檔案</strong>
+                <span>拖拉或點擊選擇 JPG / PNG / WebP / GIF / SVG</span>
+                <div class="file-name" id="frontFileName">尚未選擇檔案</div>
+              </div>
+            </div>
+            <div class="side-upload-card back-side-panel" data-side-box="back">
+              <div class="side-title"><span>背面</span><small>PDF 第 2 頁</small></div>
+              <div class="dropzone-side" data-side="back" role="button" tabindex="0">
+                <input id="backFileInput" class="side-file-input" data-side="back" type="file" accept=".jpg,.jpeg,.png,.gif,.svg,.pdf,.ai,.eps,.webp" hidden>
+                <i class="fa-solid fa-cloud-arrow-up upload-cloud"></i>
+                <strong>上傳背面檔案</strong>
+                <span>雙面名片 / 明信片</span>
+                <div class="file-name" id="backFileName">尚未選擇檔案</div>
+              </div>
+            </div>
+          </div>
+          <div class="preview-stack">
+            <div class="preview-board preview-side" data-side-preview="front">
+              <div class="preview-orientation-bar">
+                <span>正面預覽</span>
+                <div class="orientation-switch preview-orientation-switch">
+                  <button class="orientation-btn active" type="button" data-orientation="landscape">橫式</button>
+                  <button class="orientation-btn" type="button" data-orientation="portrait">直式</button>
+                </div>
+              </div>
+              <div class="preview-tools"><div class="drag-note"><i class="fa-solid fa-hand-pointer"></i> 可拖拉圖片位置</div><label class="zoom-box">縮放 <input type="range" class="zoomRange" data-side="front" min="100" max="250" value="100"><span class="zoomLabel" data-side="front">100%</span></label></div>
+              <div class="print-preview-wrap"><div class="print-preview" data-preview="front"><div class="preview-stage"><img class="preview-img" data-side="front" alt="正面預覽"></div><div class="bleed-frame"></div><div class="trim-frame"></div><div class="crop-mark tl"></div><div class="crop-mark tr"></div><div class="crop-mark bl"></div><div class="crop-mark br"></div><div class="corner-label bleed">出血</div></div></div>
+            </div>
+            <div class="preview-board preview-side back-side-panel" data-side-preview="back">
+              <div class="preview-orientation-bar"><span>背面預覽</span><small>與正面共用尺寸 / 出血 / 圓角</small></div>
+              <div class="preview-tools"><div class="drag-note"><i class="fa-solid fa-hand-pointer"></i> 可拖拉背面位置</div><label class="zoom-box">縮放 <input type="range" class="zoomRange" data-side="back" min="100" max="250" value="100"><span class="zoomLabel" data-side="back">100%</span></label></div>
+              <div class="print-preview-wrap"><div class="print-preview" data-preview="back"><div class="preview-stage"><img class="preview-img" data-side="back" alt="背面預覽"></div><div class="bleed-frame"></div><div class="trim-frame"></div><div class="crop-mark tl"></div><div class="crop-mark tr"></div><div class="crop-mark bl"></div><div class="crop-mark br"></div><div class="corner-label bleed">出血</div></div></div>
+            </div>
+            <div class="preview-legend"><span><i class="legend-dot legend-red"></i>出血尺寸：<b id="metaBleed">9.4 x 5.8 cm</b></span><span><i class="legend-dot legend-blue"></i>成品尺寸：<b id="metaTrim">9 x 5.4 cm</b></span><span><i class="legend-dot legend-black"></i>十字對位標在桃紅框外</span><span>出血值：<b id="metaBleedValue">0.2 cm</b></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="step-block-v7" id="step3">
+        <div class="step-head-v7"><span class="step-no">Step 3</span><h2>檢查檔案</h2></div>
+        <p class="section-desc">先做線上檢查檔案，若是複雜 AI、PDF、刀模、特殊加工或文字很多的檔案，建議交給專業人工檢查。</p>
+        <div class="step-actions"><button class="btnx btnx-primary" id="preflightBtn" type="button"><i class="fa-solid fa-clipboard-check"></i> 線上檢查檔案</button><button class="btnx btnx-ghost" id="manualCheckBtn" type="button"><i class="fa-solid fa-user-gear"></i> 專業人工檢查</button></div>
+        <div class="preflight-report" id="preflightReport">
+          <div class="report-top"><div><h3 id="reportTitle">等待檢查</h3><p id="reportDesc">上傳檔案後執行線上檢查。</p></div><span class="risk-badge risk-medium" id="riskBadge">中風險</span></div>
+          <div class="check-list" id="checkList"></div>
+          <p><b>建議處理：</b><span id="suggestedActions">尚未產生建議。</span></p>
+        </div>
+      </section>
+
+      <section class="step-block-v7 step-tools-v19" id="step4">
+        <div class="step-head-v7"><span class="step-no">Step 4</span><h2>選功能並生成檔案</h2></div>
+        <div class="tool-panel-grid">
+          <div class="tool-panel recommended-panel">
+            <div class="tool-panel-title"><i class="fa-solid fa-print"></i><span>建議流程</span></div>
+            <button class="repair-tool active" type="button" data-action="print_ready"><strong>轉印刷檔 PDF</strong><small>整合出血、裁切線、色彩檢查與 PDF 生成。</small></button>
+          </div>
+          <div class="tool-panel">
+            <div class="tool-panel-title"><i class="fa-solid fa-screwdriver-wrench"></i><span>免費修圖小工具</span></div>
+            <div class="tool-list compact-tools">
+              <button class="repair-tool" type="button" data-action="convert_pdf"><strong>轉 PDF</strong><small>JPG / PNG / WebP / GIF / SVG → PDF</small></button>
+              <button class="repair-tool" type="button" data-action="add_bleed"><strong>只加出血</strong><small>依成品尺寸建立出血範圍。</small></button>
+              <button class="repair-tool" type="button" data-action="add_crop_marks"><strong>只加裁切線</strong><small>加入四角裁切標記。</small></button>
+              <button class="repair-tool" type="button" data-action="bleed_crop"><strong>出血 + 裁切線</strong><small>建立出血範圍與四角裁切標記。</small></button>
+              <button class="repair-tool" type="button" data-action="upscale"><strong>圖片放大</strong><small>產生 JPG 檔，圖片放大 2 倍。</small></button>
+              <button class="repair-tool" type="button" data-action="convert_cmyk"><strong>轉 CMYK</strong><small>產生 JPG 檔，RGB 轉 CMYK 色彩模式。</small></button>
+            </div>
+          </div>
+          <div class="tool-panel vip-panel">
+            <div class="tool-panel-title"><i class="fa-solid fa-crown"></i><span>VIP / 專業</span></div>
+            <div class="tool-list">
+              <button class="repair-tool" type="button" data-action="coating_plate" data-vip="yes"><strong>亮P / 霧P 黑版</strong><small>局部上光加工黑稿草稿。</small></button>
+              <button class="repair-tool" type="button" data-action="enhance_pdf" data-vip="yes"><strong>圖片變清晰</strong><small>改善銳利度、對比與細節。</small></button>
+              <button class="repair-tool" type="button" data-action="redraw_text" data-vip="yes"><strong>人工重製文字</strong><small>將點陣圖的文字轉向量或重新編排。</small></button>
+            </div>
+          </div>
+        </div>
+        <div class="selected-tool-bar"><span>目前選擇：</span><b id="currentToolName">轉印刷檔 PDF</b><button class="btnx btnx-primary" id="processBtn" type="button"><i class="fa-solid fa-gears"></i> 產生檔案</button></div>
+        <div class="download-row"><a class="btnx btnx-primary d-none" id="downloadLink" href="#" download><i class="fa-solid fa-download"></i> 下載處理完成檔案</a></div>
+      </section>
+
+      <section class="faq-section" id="faq">
+        <div class="step-head-v7"><span class="step-no">FAQ</span><h2>印刷檔常見問題</h2></div>
+        <div class="faq-grid faq-seo-grid">
+          <details><summary><i class="fa-solid fa-ruler-combined"></i> 名片完成尺寸與出血尺寸怎麼設？</summary><p>一般名片完成尺寸為 90×54mm，送印時通常要做 92×56mm 出血尺寸。AI 圖或 JPG 若剛好只有成品尺寸，容易裁切露白，建議先做出血或交由完稿人員處理。</p></details>
+          <details><summary><i class="fa-solid fa-box"></i> 名片一盒幾張？合版最低幾盒？</summary><p>本站估價以「一盒 100 張」規劃；若是常用的一級卡合版，可先以最小 3 盒作為估價單位，實際仍依當期報價與紙材為準。</p></details>
+          <details><summary><i class="fa-solid fa-clone"></i> 單面和雙面名片要怎麼上傳？</summary><p>單面只需上傳正面。雙面請分別上傳正面與背面，本網站會做兩個預覽框，產生 PDF 時可合併成同一份 PDF 的第 1 頁與第 2 頁。</p></details>
+          <details><summary><i class="fa-solid fa-left-right"></i> 正面背面在完稿時怎麼放？</summary><p>專業完稿通常會清楚區分正面、背面與加工黑稿；若是特殊加工，還需要提供 K100 黑稿，避免加工位置錯誤。</p></details>
+          <details><summary><i class="fa-solid fa-palette"></i> 合版印刷為什麼會有色差？</summary><p>合版印刷會受到拼版批次、紙材、機台、墨量與 RGB 轉 CMYK 的影響。AI 生圖多為 RGB，若沒有轉印刷色或人工確認，印出來可能和螢幕不同。</p></details>
+          <details><summary><i class="fa-solid fa-image"></i> AI 圖解析度不夠可以印嗎？</summary><p>印刷建議 300DPI。AI 生圖若像素不足，可以先用放大工具處理，但模糊圖不一定能完全修復，重要印件仍建議人工判斷。</p></details>
+          <details><summary><i class="fa-solid fa-font"></i> 文字太小會不會印不清楚？</summary><p>名片字級過小、線條太細或使用明體細線，都可能印刷斷裂或不易閱讀。AI 產生的假字與小字尤其需要重新排版。</p></details>
+          <details><summary><i class="fa-solid fa-slash"></i> 線條太細有什麼風險？</summary><p>細線、細框、淺色小字在合版印刷中容易斷線或糊掉。送印前建議檢查線條粗細、對比與安全距離。</p></details>
+          <details><summary><i class="fa-solid fa-crop-simple"></i> 四邊圓角可以直接做嗎？</summary><p>圓角屬於裁切或刀模加工設定，預覽可先呈現圓角框線，但正式送印仍要依印刷廠可做的圓角規格確認。</p></details>
+          <details><summary><i class="fa-solid fa-droplet"></i> 亮P、霧P、局部上光要另外做黑稿嗎？</summary><p>需要。局部上光、燙金、白墨等加工通常要另外提供 K100 黑稿，黑稿位置需和印刷稿對齊。</p></details>
+          <details><summary><i class="fa-solid fa-file-pdf"></i> 為什麼要轉成 PDF 再送印？</summary><p>PDF 比 JPG 更適合保留尺寸、頁面、出血與裁切標記；正反面也能合併成同一份 PDF，方便送印與客服檢查。</p></details>
+          <details><summary><i class="fa-solid fa-user-gear"></i> 什麼情況需要找專業完稿人員？</summary><p>AI 圖檔若沒有達到出血、解析度、CMYK、文字可讀性、線條粗細與加工黑稿條件，就需要專業完稿。本站除了吸引一般 AI 生圖使用者，也提供專業技術完稿服務。</p></details>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="member-modal" id="memberModal"><div class="member-card"><h3>加入 VIP，繼續使用</h3><p>人工重製文字、AI 智慧出血延伸與更高階圖片修復屬於 VIP 或人工完稿功能。</p><div class="d-grid gap-2 mt-3"><a class="btnx btnx-primary" href="plans.html">查看 VIP 方案</a><button class="btnx btnx-ghost" type="button" data-close-modal>稍後再說</button></div></div></div>
+
+
+<div class="line-modal" id="lineModal">
+  <div class="line-card">
+    <button class="line-close" type="button" data-close-line>&times;</button>
+    <h3 id="lineModalTitle">LINE 聯絡客服</h3>
+    <p id="lineModalDesc">請掃描 QR Code 加入好友，或搜尋 LINE ID：<strong>minwanchun</strong></p>
+    <img src="skin/img/line-qr.png" alt="LINE QR Code">
+  </div>
+</div>
+
+
+<div class="account-modal" id="accountModal">
+  <div class="account-card account-card-login">
+    <button class="line-close" type="button" data-close-account>&times;</button>
+    <span class="plan-badge">加入會員</span>
+    <h3>登入或綁定帳號後開始使用</h3>
+    <p>請選擇一種方式加入會員。綁定後可保留使用紀錄、下載紀錄與後續印刷估價資料。</p>
+    <div class="login-options">
+      <button class="login-btn google" type="button" data-bind-provider="Google"><i class="fa-brands fa-google"></i><span>使用 Google 帳號登入</span></button>
+      <button class="login-btn email" type="button" data-bind-provider="Email"><i class="fa-regular fa-envelope"></i><span>使用 Email 登入</span></button>
+      <button class="login-btn apple" type="button" data-bind-provider="Apple"><i class="fa-brands fa-apple"></i><span>使用 Apple 帳號登入</span></button>
+      <button class="login-btn line" type="button" data-bind-provider="LINE"><i class="fa-brands fa-line"></i><span>使用 LINE 帳號登入</span></button>
+      <button class="login-btn fb" type="button" data-bind-provider="Facebook"><i class="fa-brands fa-facebook-f"></i><span>使用 Facebook 帳號登入</span></button>
+    </div>
+    <p class="account-small-note">目前為前端示意流程；正式上線時可串接 Google / Apple / LINE / Facebook OAuth 或 Email 驗證。</p>
+  </div>
+</div>
+
+
+<footer class="footer"><div class="footer-inner"><div><b>AI 印前助手</b><p>自動檢查僅供印前風險判斷，不代表保證印刷結果。實際印刷色差、紙材、印刷方式與印刷廠設備會影響成品。</p></div><div><b>流程</b><a href="index.html#step1">品項尺寸</a><a href="index.html#step2">上傳預覽</a><a href="index.html#step3">檢查檔案</a><a href="index.html#step4">生成 PDF</a></div><div><b>服務</b><a href="plans.html">會員方案</a><a href="print-pricing.html">印刷報價</a></div><div><b>聯絡</b><a href="#" data-open-line>LINE 諮詢</a><a href="cooperation.html">合作洽談</a></div></div></footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="skin/js/main.js"></script>
+</body></html>

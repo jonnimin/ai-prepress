@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>付款測試版｜AI 印前助手</title>
+<meta name="description" content="AI 印前助手付款測試版，示意信用卡付款流程，尚未串接正式金流。">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="skin/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-nav">
+    <a class="logo logo-real" href="index.html"><img src="skin/img/logo-ai-clean.png" alt="AI 印前助手 Logo"><span>AI 印前助手</span></a>
+    <nav class="nav-menu">
+      <a href="#step1">品項尺寸</a>
+      <a href="#step2">上傳預覽</a>
+      <a href="#step3">檢查檔案</a>
+      <a href="#step4">生成 PDF</a>
+      <a href="plans.html">會員方案</a>
+      <a href="print-pricing.html">印刷估價</a>
+    </nav>
+    <div class="lang-switch"><i class="fa-solid fa-globe"></i><select id="langSelect" aria-label="Language"><option value="zh-Hant">繁中</option><option value="en">English</option><option value="ja">日本語</option></select></div>
+    <div class="social-icons" aria-label="聯絡方式">
+      <button class="social-btn line-btn" type="button" data-open-line title="LINE 聯絡客服"><i class="fa-brands fa-line"></i></button>
+      <a class="social-btn" href="mailto:wegomwc@gmail.com" title="Email"><i class="fa-regular fa-envelope"></i></a>
+      <a class="social-btn" href="https://phpmytool.com/" target="_blank" rel="noopener" title="網站"><i class="fa-solid fa-globe"></i></a>
+    </div>
+    <button class="mobile-toggle" type="button" aria-label="開啟選單"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+<main class="page-main standalone-main">
+  <section class="standalone-card payment-page-card">
+    <span class="plan-badge">付款測試版</span>
+    <h1>信用卡付款串接示意</h1>
+    <p>這是暫替版付款頁，尚未串接綠界、藍新或正式金流。正式上線時會改成安全的第三方付款頁面，並串接訂單編號、付款回傳與會員開通流程。</p>
+
+    <div class="fake-card-box">
+      <div class="fake-card-top"><span>AI PREPRESS</span><i class="fa-regular fa-credit-card"></i></div>
+      <div class="fake-card-number">•••• •••• •••• 1234</div>
+      <div class="fake-card-bottom"><span id="paymentPlanName">企業 VIP NT$399/月</span><span>TEST MODE</span></div>
+    </div>
+
+    <div class="payment-form payment-form-page">
+      <label>信用卡卡號<input type="text" value="4242 4242 4242 4242" readonly></label>
+      <label>有效期限<input type="text" value="12 / 30" readonly></label>
+      <label>安全碼<input type="text" value="123" readonly></label>
+    </div>
+
+    <div class="payment-note">
+      <b>假付款說明：</b>目前按下確認只會顯示付款成功提示，不會真的扣款。正式版會改接金流 API、付款結果通知與會員權限開通。
+    </div>
+
+    <div class="step-actions">
+      <button class="btnx btnx-primary" type="button" id="fakePayPageBtn">確認付款並開通測試會員</button>
+      <a class="btnx btnx-ghost" href="plans.html">返回會員方案</a>
+    </div>
+    <div class="coop-result" id="paymentPageResult">測試付款成功，會員狀態已暫存在此瀏覽器。</div>
+  </section>
+</main>
+<footer class="footer"><div class="footer-inner"><div><b>AI 印前助手</b><p>自動檢查僅供印前風險判斷，不代表保證印刷結果。實際印刷色差、紙材、印刷方式與印刷廠設備會影響成品。</p></div><div><b>流程</b><a href="index.html#step1">品項尺寸</a><a href="index.html#step2">上傳預覽</a><a href="index.html#step3">檢查檔案</a><a href="index.html#step4">生成 PDF</a></div><div><b>服務</b><a href="plans.html">會員方案</a><a href="print-pricing.html">印刷報價</a></div><div><b>聯絡</b><a href="#" data-open-line>LINE 諮詢</a><a href="#" data-open-coop>合作洽談</a></div></div></footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="skin/js/main.js"></script>
+</body>
+</html>
